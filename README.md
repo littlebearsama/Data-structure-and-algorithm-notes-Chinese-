@@ -29,6 +29,10 @@
         int *pa = malloc(sizeof(int)*1024*1024);
         int *pb = new int[1024*1024];
         ```
+        
+## 设计模式
+https://blog.csdn.net/liang19890820/article/details/66974516
+
 
 ## 二叉树
 二叉排序树是一种比较有用的折衷方案。  
