@@ -38,3 +38,62 @@ m_pData=pTemp;//交换
 return *this;
 }
 ```
+# 2.实现Singleton模式（单例模式）
+
+- singleton是设计模式里面的一个问题，**Singleton是唯一一个能够用短短几十行代码完整实现的模式**
+- 其目的是使得类的一个对象成为系统中的唯一实例。
+- 这种模式涉及到一个单一的类，该类负责创建自己的对象，同时确保只有单个对象被创建。这个类提供了一种访问其唯一对象的方式，可以直接访问，不需要实例化该类的对象。
+
+## 要点：
+
+单例模式的要点有三个：
+
+- 单例类有且仅有一个实例
+- 单例类必须自行创建自己的唯一实例
+- 单例类必须集合所有其他对象提供这一实例
+
+实现角度：
+
+- 提供一个private构造函数（防止外部调用而构造类的实例），这样外部就无法构造实例
+- 提供一个该类的static private对象
+- 提供一个static public函数，用于创建或获取其本身的静态私有对象（例如：GenInstance()）
+
+关键点：
+
+- 线程安全（双检锁-DCL，即：double-checked locking）
+- 资源释放
+
+## UML结构图：
+
+![](F:\学习资料备份\数据结构与算法\pic\singleton.png)
+
+## 局部静态变量
+
+```C++
+// singleton.h
+#ifndef SINGLETON_H
+#define SINGLETON_H
+
+// 非真正意义上的单例
+class Singleton
+{
+public:
+    static Singleton& GetInstance()
+    {
+        static Singleton instance;
+        return instance;
+    }
+
+private:
+    Singleton() {}
+};
+
+#endif // SINGLETON_H
+
+
+
+
+
+```
+
+
