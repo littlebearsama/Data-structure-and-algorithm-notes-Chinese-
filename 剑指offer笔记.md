@@ -65,9 +65,7 @@ return *this;
 
 ## UML结构图：
 
-![](F:\学习资料备份\数据结构与算法\pic\singleton.png)
-
-## 局部静态变量
+![](Data-structure-and-algorithm-notes-Chinese-\pic\singleton.png)
 
 ```C++
 // singleton.h
@@ -89,11 +87,9 @@ private:
 };
 
 #endif // SINGLETON_H
-
-
-
-
-
 ```
+
+## ad
+
 
 
