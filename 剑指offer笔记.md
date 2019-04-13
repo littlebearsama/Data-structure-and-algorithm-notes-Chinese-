@@ -65,7 +65,7 @@ return *this;
 
 ## UML结构图：
 
-![](littlebearsama/Data-structure-and-algorithm-notes-Chinese-/pic/singleton.png)
+![](Data-structure-and-algorithm-notes-Chinese-/pic/singleton.png)
 
 ```C++
 // singleton.h
