@@ -65,7 +65,7 @@ return *this;
 
 ## UML结构图：
 
-![](littlebearsama/Data-structure-and-algorithm-notes-Chinese-/pic/singleton.png)
+![](pic/singleton.png)
 
 ## 使用静态局部变量
 
