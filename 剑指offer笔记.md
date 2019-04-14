@@ -25,7 +25,20 @@ private:
 char* m_pData;
 };
 
-//代码：
+//解法1代码：先申请内存，再delete
+CMyString& CMyString::operator=(const CMyString& str)
+{
+if(this==str)
+{
+char *temp_pData=new char[strlen(str.m_pData)+1)];
+delete[]m_pData;
+m_pData=temp_pData;
+strcpy(m_pData,str.m_pData);
+}
+return *this;
+}
+
+//解法2代码：
 CMyString& CMyString::operator=(const CMyString& str)
 {
 if(this==str)
@@ -38,13 +51,12 @@ m_pData=pTemp;//交换
 return *this;
 }
 ```
-应该重新定义复制（拷贝）构造函数吧？像下列一样：
+在解法2代码中，如果用默认的复制构造函数会发生浅拷贝吧？所以应该重新定义复制（拷贝）构造函数吧？像下列一样：但是书上没有提及
 ```C++
-StringBad::StringBad(const StringBad & st)
+CMyString::CMyString(const CMyString & st)
 {
-len=st.len;
-str=new char[len+1];
-std::strcpy(str,st.str);
+m_pData =new char[std::strlen(st.m_pData)+1];
+std::strcpy(m_pData,st.m_pData);
 }
 ```
 # 2.实现Singleton模式（单例模式）
