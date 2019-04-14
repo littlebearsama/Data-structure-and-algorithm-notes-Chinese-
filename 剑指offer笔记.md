@@ -48,6 +48,7 @@ std::strcpy(str,st.str);
 }
 ```
 # 2.实现Singleton模式（单例模式）
+* 来源： https://blog.csdn.net/liang19890820/article/details/61615495
 
 - singleton是设计模式里面的一个问题，**Singleton是唯一一个能够用短短几十行代码完整实现的模式**
 - 其目的是使得类的一个对象成为系统中的唯一实例。
