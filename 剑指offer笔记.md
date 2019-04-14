@@ -38,7 +38,7 @@ strcpy(m_pData,str.m_pData);
 return *this;
 }
 
-//解法2代码：
+//解法2代码：使用拷贝构造函数
 CMyString& CMyString::operator=(const CMyString& str)
 {
 if(this==str)
