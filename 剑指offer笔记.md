@@ -13,7 +13,7 @@
 * 连续赋值
 
 ## 代码：
-```
+```C++
 class CMyString
 {
 public:
@@ -36,6 +36,15 @@ strTemp.m_pData=m_pData;//交换
 m_pData=pTemp;//交换
 }
 return *this;
+}
+```
+应该重新定义复制（拷贝）构造函数吧？像下列一样：
+```C++
+StringBad::StringBad(const StringBad & st)
+{
+len=st.len;
+str=new char[len+1];
+std::strcpy(str,st.str);
 }
 ```
 # 2.实现Singleton模式（单例模式）
