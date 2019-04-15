@@ -100,6 +100,7 @@ std::strcpy(m_pData,st.m_pData);
 class Singleton
 {
 public:
+//静态成员函数以及访问类型为公有的，使得不需要对象也能够在外部调用该函数创建实例 如：Singleton::GetInstance();
     static Singleton& GetInstance()
     {
         static Singleton instance;
@@ -134,7 +135,7 @@ private:
      class Singleton
      {
      public:
-         // 修改返回类型为指针类型,静态成员函数以及访问类型为公有的，使得不需要对象也能够在外部调用该函数创建实例 如：Singleton::GetInstance();
+         // 修改返回类型为指针类型
          static Singleton* GetInstance()
          {
              static Singleton instance;
@@ -148,7 +149,7 @@ private:
      #endif // SINGLETON_H
      ```
 
-  2. 显式地声明类的拷贝构造函数，并重载赋值运算符。（个人觉得比较好的方法），分别显式地声明了，构造函数，拷贝构造函数，和重载赋值运算符使得外部不会通过各种方式创建对象，能够通过GetInstance()方法创建
+  2. 显式地声明类的拷贝构造函数，并重载赋值运算符。（个人觉得比较好的方法），**分别显式地声明了，构造函数，拷贝构造函数，和重载赋值运算符,其访问类型为私有，说明只有调用公有类方法来调用它们才能访问这三个函数，使得外部不会通过各种方式创建对象，只能够通过GetInstance()方法创建**
 
      ```c++
      // singleton.h
@@ -175,8 +176,8 @@ private:
      
      private:
          Singleton() {}  // 构造函数（被保护）
-         Singleton(Singleton const &);  // 无需实现
-         Singleton& operator = (const Singleton &);  // 无需实现
+         Singleton(Singleton const &);  // 无需实现，构造函数拷贝
+         Singleton& operator = (const Singleton &);  // 无需实现，赋值运算符
      };
      
      #endif // SINGLETON_H
