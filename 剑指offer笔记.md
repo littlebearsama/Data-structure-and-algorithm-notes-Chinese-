@@ -60,7 +60,8 @@ std::strcpy(m_pData,st.m_pData);
 }
 ```
 # 2.实现Singleton模式（单例模式）/要考虑多线程
-* 来源： https://blog.csdn.net/liang19890820/article/details/61615495
+* 来源1：https://blog.csdn.net/liang19890820/article/details/61615495
+* 来源2：https://www.cnblogs.com/zhaoyan001/p/6365064.html
 
 - singleton是设计模式里面的一个问题，**Singleton是唯一一个能够用短短几十行代码完整实现的模式**
 - 其目的是使得类的一个对象成为系统中的唯一实例。
