@@ -59,7 +59,7 @@ m_pData =new char[std::strlen(st.m_pData)+1];
 std::strcpy(m_pData,st.m_pData);
 }
 ```
-# 2.实现Singleton模式（单例模式）
+# 2.实现Singleton模式（单例模式）/要考虑多线程
 * 来源： https://blog.csdn.net/liang19890820/article/details/61615495
 
 - singleton是设计模式里面的一个问题，**Singleton是唯一一个能够用短短几十行代码完整实现的模式**
@@ -270,7 +270,7 @@ Singleton *Singleton::GetInstance()
 #define SINGLETON_H
 
 #include <iostream>
-#include <mutex>
+#include <mutex>//互斥器，使多个线程和谐工作。同一时间内，只能有一个线程得到互斥对象，并获得资源操作权限，那么如果同一时间其他线程也想去操作资源，此时就会因为Mutex未处于激发状态，而无奈的等待…
 using namespace std;
 
 // 单例 - 懒汉式/饿汉式公用
