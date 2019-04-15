@@ -78,7 +78,7 @@ std::strcpy(m_pData,st.m_pData);
 
 - 提供一个private构造函数（防止外部调用而构造类的实例），这样外部就无法构造实例
 - 提供一个该类的static private对象
-- 提供一个static public函数，用于创建或获取其本身的静态私有对象（例如：GenInstance()）
+- 提供一个static public函数，用于创建或获取其本身的静态私有对象（例如：GenInstance()）**用static修饰成员函数使得不需要生成对象就可以访问该函数，但是在 static 函数内不能访问非静态成员**
 
 关键点：
 
@@ -134,7 +134,7 @@ private:
      class Singleton
      {
      public:
-         // 修改返回类型为指针类型
+         // 修改返回类型为指针类型,静态成员函数以及访问类型为公有的，使得不需要对象也能够在外部调用该函数创建实例 如：Singleton::GetInstance();
          static Singleton* GetInstance()
          {
              static Singleton instance;
@@ -148,7 +148,7 @@ private:
      #endif // SINGLETON_H
      ```
 
-  2. 显式地声明类的拷贝构造函数，并重载赋值运算符。
+  2. 显式地声明类的拷贝构造函数，并重载赋值运算符。（个人觉得比较好的方法），分别显式地声明了，构造函数，拷贝构造函数，和重载赋值运算符使得外部不会通过各种方式创建对象，能够通过GetInstance()方法创建
 
      ```c++
      // singleton.h
