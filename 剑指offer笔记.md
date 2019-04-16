@@ -426,36 +426,52 @@ return 0;
 > * 4(索引值)和2(索引值位置的元素)不相等，但是2(索引值位置的元素)和2(以该索引值位置的元素2为索引值的位置的元素)相等，则找到了第一个重复的元素。
 ## 代码：
 ```C++
+#include<iostream>
+
 class Solution {
 public:
-    // Parameters:
-    //        numbers:     an array of integers
-    //        length:      the length of array numbers
-    //        duplication: (Output) the duplicated number in the array number
-    // Return value:       true if the input is valid, and there are some duplications in the array number
-    //                     otherwise false
-    bool duplicate(int numbers[], int length, int* duplication) {
-        // 非法输入
-        if(numbers == NULL || length <= 0){
-            return false;
-        }
-        // 非法输入
-        for(int i = 0; i < length; i++){
-            if(numbers[i] < 0 || numbers[i] > length - 1){
-                return false;
-            }
-        }
-        // 遍历查找第一个重复的数
-        for(int i = 0; i < length; i++){
-            while(numbers[i] != i){
-                if(numbers[i] == numbers[numbers[i]]){
-                    *duplication = numbers[i];
-                    return true;
-                }
-                swap(numbers[i], numbers[numbers[i]]);
-            }
-        }
-        return false;
-    }
+	// Parameters:
+	//        numbers:     an array of integers           //整型数组
+	//        length:      the length of array numbers    //数组长度
+	//        duplication: (Output) the duplicated number in the array number//输出其中一个副本数字
+	// Return value:       true if the input is valid, and there are some duplications in the array number
+	//                     otherwise false
+	bool duplicate(int numbers[], int length, int* duplication) {
+		// 非法输入
+		if (numbers == nullptr || length <= 0){
+			return false;
+		}
+		// 非法输入
+		for (int i = 0; i < length; i++){
+			if (numbers[i] < 0 || numbers[i] > length - 1){
+				return false;
+			}
+		}
+		// 遍历查找第一个重复的数
+		for (int i = 0; i < length; i++){
+			while (numbers[i] != i){
+				if (numbers[i] == numbers[numbers[i]]){
+					*duplication = numbers[i];
+					return true;
+				}
+				//swap(numbers[i], numbers[numbers[i]]);
+				int temp = numbers[i];
+				numbers[i] = numbers[temp];
+				numbers[temp] = temp;
+			}
+		}
+		return false;
+	}
 };
+int main(){
+	Solution s;
+	int a[] = {9,1,0,5,6,4,3,2,2,8};
+	int dup[10] = {};
+	s.duplicate(a, 10, dup);
+	for (int i = 0; i < 10; i++)
+	{
+		std::cout << dup[i] << std::endl;
+	}
+	getchar();
+}
 ```
