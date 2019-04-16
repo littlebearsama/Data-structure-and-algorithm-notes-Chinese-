@@ -1,10 +1,31 @@
 # Data-structure-and-algorithm-notes-Chinese-
+
 ## 资源
-* 1.数据结构
- > [数据结构和算法动态可视化](https://visualgo.net/zh)
- > [数据结构和算法目录表](http://www.cnblogs.com/skywang12345/p/3603935.html)
-* 2.设计模式
- > [C++ 设计模式](https://blog.csdn.net/liang19890820/article/details/66974516)
+
+- 1.数据结构
+
+> [数据结构和算法动态可视化](https://visualgo.net/zh)
+> [数据结构和算法目录表](http://www.cnblogs.com/skywang12345/p/3603935.html)
+
+- 2.设计模式
+
+> [C++ 设计模式](https://blog.csdn.net/liang19890820/article/details/66974516)
+>
+> - 3.剑指offer
+>
+>   [牛课网必刷题（剑指offer）   --面试](https://www.nowcoder.com/discuss/19305?type=0&order=1&pos=14&page=1)
+>
+>   [剑指offer答案：](https://github.com/zhuyaguang/kill-interview-part-2/blob/master/%E5%89%91%E6%8C%87offer/%E5%89%91%E6%8C%87offer%E6%B1%87%E6%80%BB.md)
+>
+> -  4.[哈希学习](https://blog.csdn.net/LeeWei4939/article/details/78806230)
+>
+> - 5.推荐书籍
+>
+>   1、算法分析与分析基础：这本比较简单，推荐新手看。
+>
+>   2、数据结构与算法分析—-C语言描述：代码用C写的，推荐看。
+>
+>   3、挑战程序设计竞赛(第二版)：也是很不错的一本书，推荐看。
 ---
 
 ## 数据结构
