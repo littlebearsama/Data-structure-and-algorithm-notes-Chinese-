@@ -10,8 +10,7 @@
  [C++ 设计模式](https://blog.csdn.net/liang19890820/article/details/66974516)
 
 - 3.剑指offer
- [牛课网必刷题（剑指offer）   --面试](https://www.nowcoder.com/discuss/19305?type=0&order=1&pos=14&page=1)
-
+  [牛课网必刷题（剑指offer）   --面试](https://www.nowcoder.com/discuss/19305?type=0&order=1&pos=14&page=1)
   [剑指offer答案：](https://github.com/zhuyaguang/kill-interview-part-2/blob/master/%E5%89%91%E6%8C%87offer/%E5%89%91%E6%8C%87offer%E6%B1%87%E6%80%BB.md)
 
  - 4.[哈希学习](https://blog.csdn.net/LeeWei4939/article/details/78806230)
