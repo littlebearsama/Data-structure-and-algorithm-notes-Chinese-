@@ -210,7 +210,7 @@ void mergeSort(int a[], int low, int high) {
 当我们称之为归并的（a，低，中，高）时候，我们处理**k =（高 - 低+ 1）**项。 最多会有 **k-1** 个比较。 从原始数组 **a** 到临时数组 **b** 有 **k** 个移动，而另一个 **k** 移回。 总的来说，归并子例程内的操作次数 <3**k**-1 = O（**k**）。
 重要的问题是这个归并子程序被调用了多少次？
 
-![](pic\merge.png)
+![](pic/merge.png)
 
 级别1：2 ^ 0 = 1调用merge( ) 和 N / 2 ^ 1个项目，O（2 ^ 0 x 2 x N / 2 ^ 1）= O（N）级别2：2 ^ 1 = 2调用 merge( ) 与N / 2 ^ 2个项目，O（2 ^ 1 x 2 x N / 2 ^ 2）= O（N）级别3：2 ^ 2 = 4调用merge( ) 与N / 2 ^ O（2 ^ 2 x 2 x N / 2 ^ 3）= O（N）...级别（log N）：2 ^（log N-1）（或N / 2）调用merge( ) ），其中N / 2 ^ log N（或1）个项目，O（N）
 
@@ -261,11 +261,11 @@ Harder Discussion: Is it good to always put item(s) that is/are == **p** on S2 a
 
 * 当a[k]>=p时
 
-![](pic\partition1.png)
+![](pic/partition1.png)
 
 * 当a[k]<p时
 
-![](pic\partition2.png)
+![](pic/partition2.png)
 
 * 分区排序实现代码：
 
@@ -321,7 +321,7 @@ void quickSort(int a[], int low, int high) {
 
 在这种最坏情况的输入场景中，会发生以下情况：
 
-![](pic\qsort_worstcase.png)
+![](pic/qsort_worstcase.png)
 
 第一个分区需要O（**N**）时间，将a分成0,1，N-1个项目，然后向右递归。
 第二个花费O（**N**-1）时间，将a分成0,1，N-2个项目，然后再次向右递归...
