@@ -2,9 +2,12 @@
 
 ## 资源
 
-- 1.数据结构
+- 1.数据结构和算法
 [数据结构和算法动态可视化](https://visualgo.net/zh)
+
 [数据结构和算法目录表](http://www.cnblogs.com/skywang12345/p/3603935.html)
+
+[十大经典排序算法（动图加代码）](<https://www.cnblogs.com/onepixel/articles/7674659.html>)
 
 - 2.设计模式
  [C++ 设计模式](https://blog.csdn.net/liang19890820/article/details/66974516)
