@@ -1,5 +1,5 @@
 * 重点掌握：归并排序（时间复杂度：O(NlogN)）。快速排序（非随机时间复杂度O(N^2),随机时间复杂度（O(NlogN)））。
-* [十大经典排序算法[(https://www.cnblogs.com/onepixel/articles/7674659.html)
+* [十大经典排序算法](https://www.cnblogs.com/onepixel/articles/7674659.html)
 **********
 # 排序
 
