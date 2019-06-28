@@ -4,6 +4,8 @@
 ********
 
 ## 资源
+- 0.剑指offer源码
+[《剑指Offer》第二版源代码](https://github.com/RobotWithCV/CodingInterviewChinese2)
 
 - 1.数据结构和算法
 
